@@ -1,28 +1,56 @@
 # Pub/Sub Automation Demo
 
-This project is a simple Publisher–Subscriber prototype built using Python standard libraries only.
+A simple Publisher–Subscriber prototype built using Python standard libraries only.
 
-## Features
-- Publisher and Subscriber desktop applications
-- TCP socket communication
-- Subscribe / Unsubscribe functionality
+## Overview
+
+This project demonstrates:
+- Publisher and Subscriber communication
+- Subscribe / Unsubscribe behavior
 - Event-driven notifications
-- On-demand polling using "Check Status"
-- No background polling
-- Simple Tkinter UI for demonstration
+- On-demand polling
+- TCP socket communication
+- Basic desktop UI using Tkinter
+
+The implementation focuses on communication plumbing rather than UI styling.
+
+---
 
 ## Architecture
-- Publisher acts as a TCP server
-- Subscriber acts as a TCP client
+
+- Publisher acts as a TCP socket server
+- Subscriber acts as a TCP socket client
 - Communication is implemented using raw Python sockets
+- UI is implemented using Tkinter
 
-## Files
-- `publisher.py` → Publisher UI and connection state
-- `subscriber.py` → Subscriber UI and event handling
-- `socket_server.py` → Socket communication layer
-- `main.py` → Launches Publisher and Subscriber together
+---
 
-## How to Run
+## Features
+
+### Publisher
+- Connect button
+- Disconnect button
+- Connection state visualization
+- Event broadcasting to subscribed clients
+
+### Subscriber
+- Subscribe button
+- Unsubscribe button
+- Check Status button
+- Text box displaying received events and polling results
+
+---
+
+## Event Behavior
+
+- Events are delivered only when Subscriber is subscribed
+- No events are received in unsubscribed mode
+- Status polling occurs only when "Check Status" is pressed
+- No background polling is implemented
+
+---
+
+## Run the Application
 
 Run both applications:
 
