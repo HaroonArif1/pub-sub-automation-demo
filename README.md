@@ -28,3 +28,8 @@ Run both applications:
 
 ```bash
 python main.py
+```
+## Or run separately:
+```bash
+python publisher.py
+python subscriber.py
